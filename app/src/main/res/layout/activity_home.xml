@@ -7,17 +7,17 @@
     android:id="@+id/drawer"
     android:fitsSystemWindows="true"
     android:layout_height="match_parent"
-    tools:context=".UserHome">
+    tools:context=".Home">
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navigationView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:menu="@menu/drawermenu"
-            android:background="@color/colorPrimary"
+            android:background="#ffff"
             android:layout_gravity="start"
             app:headerLayout="@layout/header"
-            app:itemTextColor="#ffff"
+            app:itemTextColor="#228B22"
             />
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,19 +26,21 @@
         <FrameLayout
             android:id="@+id/fragmentContainer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_above="@+id/appnavigation"/>
+
+              
 
                 <com.google.android.material.bottomnavigation.BottomNavigationView
                     android:id="@+id/appnavigation"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    app:itemIconTint="@color/colorPrimaryDark"
+                    app:itemIconTint="#228B22"
                     android:layout_alignParentBottom="true"
                     app:menu="@menu/usernavigation"
                     />
 
-
-
         </RelativeLayout>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
