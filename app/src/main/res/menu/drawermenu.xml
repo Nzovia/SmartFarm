@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Promote"
+        android:title="@string/promote_us"
+        android:icon="@drawable/ic_promote"/>
+    <item
+        android:id="@+id/Settings"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_settings"/>
+    <item
+        android:id="@+id/RateUs"
+        android:title="@string/rate_us"
+        android:icon="@drawable/ic_rateus"/>
+    <item
+        android:id="@+id/Share"
+        android:title="@string/share_app"
+        android:icon="@drawable/ic_share"/>
+
+
+
+</menu>
