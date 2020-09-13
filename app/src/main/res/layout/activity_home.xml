@@ -18,18 +18,34 @@
             android:layout_gravity="start"
             app:headerLayout="@layout/header"
             app:itemTextColor="#228B22"
+
             />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+                <!--android:theme="?attr/actionBarTheme"-->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar1"
+                    android:layout_width="match_parent"
+                    app:navigationIcon="@drawable/menu"
+                    android:background="#FFFFFF"
+                    android:layout_alignParentTop="true"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                    android:layout_height="56dp"
+                    />
+
         <FrameLayout
             android:id="@+id/fragmentContainer"
             android:layout_width="match_parent"
+            android:layout_below="@+id/toolbar1"
             android:layout_height="match_parent"
-            android:layout_above="@+id/appnavigation"/>
+            android:layout_above="@+id/appnavigation"
+            />
 
-              
+
 
                 <com.google.android.material.bottomnavigation.BottomNavigationView
                     android:id="@+id/appnavigation"
@@ -41,6 +57,7 @@
                     />
 
         </RelativeLayout>
+
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
