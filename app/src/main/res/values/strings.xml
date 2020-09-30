@@ -15,4 +15,15 @@
     <string name="sukuma">Sukuma</string>
     <string name="carrots">Carrots</string>
     <string name="spinach">Spinach</string>
+    <string name="desription">Desription</string>
+    <string name="tomato_solanum_lycopersicum_flowering_plant_of_the_nightshade_family_solanaceae_cultivated_extensively_for_its_edible_fruits_labelled_as_a_vegetable_for_nutritional_purposes_tomatoes_are_a_good_source_of_vitamin_c_and_the_phytochemical_lycopene">Tomato, (Solanum lycopersicum), flowering plant of the nightshade family (Solanaceae), cultivated extensively for its edible fruits. Labelled as a vegetable for nutritional purposes, tomatoes are a good source of vitamin C and the phytochemical lycopene.</string>
+    <string name="tomatodescription">Tomato is flowering plant of the nightshade family,cultivated extensively for its edible fruits.Tomatoes are a good source of vitamin C</string>
+    <string name="read_more">Read more</string>
+    <string name="description">My job during this development is developing the Android one. We use Android Studio as our IDE. It is an official IDE by Google for developing Android applications. Well, this is my last article related to my Software Development Project course. This time, I want to share my experience using Android Studio and Kotlin for the first time, especially in making a Recycler View, and to be more complicated, it is also inside a Fragment.</string>
+    <string name="cropplanting">Planting</string>
+    <string name="crop_treatment">Crop Treatment</string>
+    <string name="produce_marketing">Produce Marketing</string>
+    <string name="crop_cultivation">Crop Cultivation</string>
+    <string name="produce_harvesting">Produce Harvesting</string>
+    <string name="crop_planting">Crop Planting</string>
 </resources>

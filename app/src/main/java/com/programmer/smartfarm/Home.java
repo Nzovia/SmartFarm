@@ -7,12 +7,20 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.app.MediaRouteButton;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Switch;
 
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
 
 public class Home extends AppCompatActivity {
     //variables
@@ -24,6 +32,12 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+       // var notificationsBadge : View? =null
+                //private fun getBadge() :View{
+
+       // }
+        addBadgeview();
 
         //the Hooks press Ctrl +D to duplicate them then change the id's
         drawerLayout=findViewById(R.id.drawer);
@@ -51,6 +65,31 @@ public class Home extends AppCompatActivity {
         // the first item clicked to be in default as shown
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new HomeFragment()).commit();
     }
+
+    private void addBadgeview() {
+        try{
+            BottomNavigationMenuView menuView=(BottomNavigationMenuView) navigationView.getChildAt(0);
+            BottomNavigationItemView itemView=(BottomNavigationItemView) menuView.getChildAt(2);
+            View notificationBadge = LayoutInflater.from(Home.this).inflate(R.layout.custom_layout, menuView, false);
+            itemView.addView(notificationBadge);
+            notificationBadge.setVisibility(GONE);//initially badge will be invisible
+            
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    //refresh badge
+    //private  void refreshBadgeView(){
+        //try {
+            //boolean badgeIsVisible= notificationsBadge.getVisibility() !=GONE;
+            //MediaRouteButton notificationBadge;
+            //notificationBadge.setVisibility(badgeIsVisible ? GONE : VISIBLE);//makes badge visible and invisible
+
+        //}catch (Exception e){
+            //e.printStackTrace();
+       // }
+    //}
+
     // create reactions to clicks on the bottom naviagation items
     private  BottomNavigationView.OnNavigationItemSelectedListener navListener=new
             BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -65,7 +104,7 @@ public class Home extends AppCompatActivity {
                 case R.id.activities:
                     selectedFragment=new ActivitiesFragment();
                     break;
-                case R.id.updates:
+                case R.id.notification:
                     selectedFragment=new UpdatesFragment();
                     break;
 

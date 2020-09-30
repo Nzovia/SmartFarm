@@ -9,9 +9,9 @@
         android:title="@string/activities"
         android:icon="@drawable/ic_landscape"/>
     <item
-        android:id="@+id/updates"
-        android:title="@string/updates"
-        android:icon="@drawable/ic_update_black_24dp"/>
+        android:id="@+id/notification"
+        android:title="Notifications"
+        android:icon="@drawable/ic_notifications"/>
 
 
 </menu>
